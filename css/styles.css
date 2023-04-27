@@ -1,0 +1,1317 @@
+  /*===== GOOGLE FONTS =====*/
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+  /*===== VARIABLES CSS =====*/
+  :root {
+    --header-height: 3rem;
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --nav-font-size:  15px;  
+    --title-font-size: 30px;
+    --description-font-size:  16px;
+    --h1-font-size: 20px;
+    --h2-font-size: 14px;
+    --button-font-size: 16px;
+
+    /*========== Margenes ==========*/
+    --mb-1: 150px; 
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  html {
+  scroll-behavior: smooth;
+  }
+
+  /*========== Scroll top ==========*/
+  .to-top {
+    background: #FFFFFF;
+    position: fixed;
+    bottom: 16px;
+    right:32px;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #EF7625;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+
+  .to-top.active {
+    bottom: 36px;
+    pointer-events: auto;
+    scroll-behavior: smooth;
+    opacity: 1;
+  }
+
+  /*========== Mobile nav bar ==========*/
+  .topnav {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    position: relative;
+    display: none;
+    box-shadow: 2px 2px 5px 1px rgb(0,0,0,0.2);
+  }
+
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+
+  /* Style navigation menu links */
+  .topnav a {
+    color: #EF7625;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    box-shadow: 2px 2px 5px 1px rgb(0,0,0,0.1);
+  }
+
+  .mb-button {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+
+  .mb-button:hover {
+    background-color: #EF7625;
+    color: #FFFFFF;
+  }
+
+  /* Style the menu */
+  .topnav a.icon {
+    background: unset;
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    font-size: 20px;
+    box-shadow: none;
+  }
+
+  /* Style the active link (or home/logo) */
+  .logo {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+  }
+
+  .logo img {
+    height: 80px;
+    margin-left: 35px;
+    margin-top: 5px;
+  }
+
+  /*========== Buttons ==========*/
+
+  .Button {
+    font-size: var(--button-font-size);
+    font-weight: bold;
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #EF7625;
+    padding: 8px 64px;
+    border-radius: 80px;
+    transition: 0.5s;
+    border: 5px solid #EF7625;
+    text-decoration: none; 
+  }
+
+  .Button:hover {
+    background-color: #EF7625;
+    color: white;
+  }
+
+  /*========== NAV ==========*/
+
+  .NAV-Container {
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 5px 1px rgb(0,0,0,0.2);
+    min-height: 65px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  nav {
+    display: flex;
+    padding: 2% 0%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav img {
+    height: 125px;
+    width: auto;
+    margin-left: var(--mb-1);
+  }
+
+  .NAV-List {
+    flex: 1;
+    text-align: right;
+    margin-right: var(--mb-1);
+  }
+
+  .NAV-List ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 14px;
+    position: relative;
+    font-weight: 500;
+  }
+
+  .NAV-List ul li ::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #EF7625;
+    display: block;
+    margin: 0%;
+    transition: 0.5s;
+  }
+
+  .NAV-List ul li :hover::after {
+    width: 100%;
+  }
+
+  .nav__button {
+    color: #707070;
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+  }
+
+  .nav__button:hover {
+    transition: 0.4s;
+    color: #EF7625;
+  }
+
+  .active__button {
+    color: #EF7625;
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+  }
+
+  /*========== HOME ==========*/
+
+  .HOME__Container {
+    width: auto;
+    height: 450px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: left;
+    align-items: center;
+    align-content: center;
+  }
+
+  .HOME__Title {
+    font-size: 45px;
+    color: #EF7625;
+  }
+
+  .HOME__Subtitle {
+    font-size: var(--title-font-size);
+    color: #393939;
+  }
+
+  .HOME__img {
+    width: 500px;
+    justify-self: right;
+  }
+
+  /*========== ABOUT ==========*/
+
+  .ABOUT__Title {
+    font-size: var(--title-font-size);
+    font-weight: bold;
+  }
+
+  .ABOUT__Subtitle {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .ABOUT__Data {
+    text-align: justify;
+    margin-left: 20px;
+  }
+
+  .ABOUT__Description {
+    margin-bottom: 24px;
+    max-height: 400px;
+    overflow: auto;
+    font-size: var(--description-font-size);
+  }
+
+  .ABOUT__img {
+    height: 600px;
+    width: auto;
+    justify-self: left;
+  }
+
+  .ABOUT__Container {
+    width: auto;
+    height: 650px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: right;
+    align-items: center;
+    align-content: center;
+    flex-direction: row-reverse;
+  }
+
+  .signature {
+    width: 90px;
+    margin-bottom: 24px;
+  }
+
+  /*========== SERVICES ==========*/
+
+  .SERVICES__section {
+    margin-top: 28px;
+  }
+
+  .SERVICES__Headline {
+    text-align: center;
+    font-size: var(--title-font-size);
+    color: #393939;
+    font-weight: bold;
+  }
+
+  .SERVICES__Container {
+    width: auto;
+    height: 250px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+    margin-top: 32px;
+    display: grid;
+    gap: 24px;
+    row-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: right;
+    align-items: center;
+    align-content: center;
+    flex-direction: row-reverse;
+  }
+
+  .SERVICES__Content {
+    text-align: center;
+  }
+
+  .SERVICES__Title {
+    font-size: var(--h1-font-size);
+    color: #393939;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .SERVICES__Description {
+    padding: 0 16px;
+    text-align: center;
+    font-size: var(--h2-font-size);
+  }
+
+  .SERVICES__img {
+    height: 80px;
+    width: auto;
+  }
+
+  /*========== MENU ==========*/
+
+  .MENU__section {
+    margin-top: 65px;
+  }
+
+  .MENU__Headline {
+    text-align: center;
+    font-size: var(--title-font-size);
+    color: #393939;
+    font-weight: bold;
+  }
+
+  .MENU__Container {
+    width: auto;
+    height: 950px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+    margin-top: 35px;
+    display: grid;
+    gap: 24px;
+    justify-content: center;
+    grid-template-columns: repeat(3, 210px);
+    column-gap: 64px;
+  }
+
+  .MENU__Content {
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 2px rgb(0,0,0,0.3);
+    padding: 12px;
+    text-align: center;
+    border-radius: 20px;
+    border: 6px solid #EF7625;
+  }
+
+  .MENU__img {
+    margin-top: 40px;
+    width: auto;
+    height: 80px;
+    align-self: center;
+    margin-bottom: 16px;
+  }
+
+  .MENU__Name {
+    color: #000000;
+    margin-top: 24px;
+    font-weight: bold;
+    font-size: var(--h1-font-size);
+  }
+
+  .MENU__Details {
+    font-size: var(--h2-font-size);
+    margin-bottom: 8px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .MENU__Detail {
+    margin-top: 40px;
+    font-weight: 600;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  .MENU__Detail:hover {
+    color: #EF7625;
+  }
+
+  /*========== Contact US ==========*/
+
+  .CONTACT__Container {
+    width: auto;
+    height: 250px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+    text-align: initial;
+    grid-template-columns: 1.75fr 1fr;
+    align-items: center;
+    display: grid;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .CONTACT__Title {
+    font-size: var(--title-font-size);
+    text-align: left;
+  }
+
+  .CONTACT__Subtitle {
+    font-size: var(--description-font-size);
+    text-align: left;
+    font-weight: 100;
+  }
+
+  .CONTACT__Button {
+    justify-self: center;
+  }
+
+  /*========== FOTTER ==========*/
+
+  footer {
+    background: #EF7625;
+    padding: 50px 30px;
+    height: 160px;
+  }
+
+  .FOTTER__Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .FOTTER__Logo {
+    height: 125px;
+    width: auto;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .FOTTER__Logo {
+    width: 165px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    color: #FFFFFF;
+    opacity: 70%;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  .tmfh {
+    color: #FFFFFF;
+  }
+
+  /*===========================================================================================================*/
+  /* Screen Size */
+
+  /*========== Large devices ==========*/ 
+  @media (min-width: 1200px) {
+
+    .NAV-Container {
+      min-height: 90px;
+    }
+
+    nav img {
+      height: 130px;
+      width: auto;
+    }
+
+    .HOME__Container {
+      height: 550px;
+    }
+
+    .HOME__Title {
+      font-size: 55px;
+    }
+
+    .HOME__img {
+      width: 600px;
+    }
+
+    .SERVICES__img {
+      height: 100px;
+    }
+
+    .MENU__Container {
+      height: 1050px;
+      grid-template-columns: repeat(3, 250px);
+      column-gap: 50px;
+    }
+
+    .MENU__Content {
+      height: 450px;
+    }
+
+    .MENU__img {
+      margin-top: 60px;
+    }
+
+    .MENU__Detail {
+      margin-top: 75px;
+    }
+
+    .MENU__Detail {
+      font-size: 16px;
+    }  
+
+    footer {
+      height: 200px;
+    }
+
+    .social-links {
+      gap: 18px;
+    }
+
+    .FOTTER__Logo {
+      height: 130px;
+      width: auto;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+
+   :root {
+      /*========== Font and typography ==========*/
+      --nav-font-size:  20px;
+      --title-font-size: 32px;
+      --description-font-size:  18px;
+      --h1-font-size: 24px;
+      --h2-font-size: 16px;
+      --button-font-size: 16px;
+      /*========== Margenes ==========*/
+      --mb-1: 175px;    
+   }
+
+  }
+
+  /*========== Medium devices ==========*/
+  @media (min-width: 992px) and (max-width: 1199px) { 
+
+    .NAV-Container {
+      min-height: 65px;
+    }
+
+    nav img {
+      height: 125px;
+      width: auto;
+    }
+
+    .HOME__Container {
+      height: 450px;
+    }
+
+    .HOME__Title {
+      font-size: 45px;
+    }
+
+    .HOME__img {
+      width: 500px;
+    }
+
+    .ABOUT__img {
+      height: 550px;
+    }
+
+    .signature {
+      width: 75px;
+      height: auto;
+      margin-bottom: 18px;
+    }
+
+    .SERVICES__Container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .SERVICES__img {
+      height: 80px;
+    }
+
+    .MENU__Container {
+      height: 900px;
+      grid-template-columns: repeat(3, 210px);
+      column-gap: 35px;
+    }
+
+    .MENU__Content {
+      height: 375px;
+    }
+
+    .MENU__img {
+      margin-top: 40px;
+    }
+
+    .MENU__Detail {
+      margin-top: 40px;
+      font-size: 14px;
+    }  
+
+    footer {
+      height: 190px;
+    }
+
+    .social-links {
+      gap: 15px;
+    }
+
+    .FOTTER__Logo {
+      height: 125px;
+      width: auto;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+
+   :root {
+      /*========== Font and typography ==========*/
+      --nav-font-size:  18px;
+      --title-font-size: 26px;
+      --description-font-size: 14px;
+      --h1-font-size: 18px;
+      --h2-font-size: 14px;  
+      --button-font-size: 16px;
+      /*========== Margenes ==========*/
+      --mb-1: 150px;   
+    }
+
+  }
+
+  /*========== Small devices ==========*/
+  @media (min-width: 768px) and (max-width: 991px) {
+    
+    .to-top {
+      font-size: 28px;
+    }
+
+    .NAV-Container {
+      min-height: 65px;
+    }
+
+    nav img {
+      height: 100px;
+      width: auto;
+    }
+
+    .HOME__Container {
+      height: 350px;
+    }
+
+    .HOME__Title {
+      font-size: 45px;
+    }
+
+    .HOME__img {
+      width: 400px;
+    }
+
+    .ABOUT__Container {
+      height: 450px;
+    }
+
+    .ABOUT__img {
+      height: 450px;
+    }
+
+    .ABOUT__Description {
+      margin-bottom: 10px;
+    }
+
+    .signature {
+      width: 65px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .SERVICES__section {
+      margin-top: 50px;
+    }
+
+    .SERVICES__Container {
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    }
+
+    .SERVICES__img {
+      height: 80px;
+    }
+
+    .MENU__Container {
+      height: 800px;
+      gap: 20px;
+      grid-template-columns: repeat(3, 185px);
+      column-gap: 22px;
+    }
+
+    .MENU__Content {
+      height: 350px;
+    }
+
+    .MENU__img {
+      margin-top: 40px;
+    }
+
+    .MENU__Detail {
+      margin-top: 40px;
+      font-size: 14px;
+    }  
+
+    .CONTACT__Container {
+      height: 200px;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    footer {
+      height: 175px;
+    }
+
+    .social-links {
+      gap: 15px;
+    }
+
+    .FOTTER__Logo {
+      height: 100px;
+      width: auto;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+
+   :root {
+      /*========== Font and typography ==========*/
+      --nav-font-size:  16px;
+      --title-font-size: 24px;
+      --description-font-size: 12px;
+      --h1-font-size: 18px;
+      --h2-font-size: 12px;
+      --button-font-size: 14px;
+      /*========== Margenes ==========*/
+      --mb-1: 75px;     
+    }
+
+  }
+
+  /*========== Extra Small devices ==========*/
+  @media (max-width: 767px) {
+
+    .to-top {
+      bottom: 16px;
+      right: 15px;
+      font-size: 25px;
+    }
+
+    .Button {
+      padding: 8px 40px;
+    }
+
+    .NAV-Container {
+      min-height: 85px;
+    }
+
+    nav img {
+      height: 85px;
+      width: auto;
+    }
+
+    .HOME__Container {
+      height: 350px;
+    }
+
+    .HOME__Title {
+      font-size: 45px;
+    }
+
+    .HOME__img {
+      width: 350px;
+    }
+
+    .ABOUT__Container {
+      height: 400px;
+    }
+
+    .ABOUT__Subtitle {
+      font-size: 12px;
+    }
+
+    .ABOUT__img {
+      height: 400px;
+    }
+
+    .ABOUT__Description {
+      margin-bottom: 5px;
+    }
+
+    .signature {
+      width: 55px;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    .SERVICES__section {
+      margin-top: 50px;
+    }
+
+    .SERVICES__Container {
+      height: 225px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .SERVICES__img {
+      height: 70px;
+      margin-bottom: -10px;
+    }
+
+    .MENU__section {
+      margin-top: 50px;
+    }
+
+    .MENU__Container {
+      height: 710px;
+      gap: 0px;
+      grid-template-columns: repeat(3, 166px);
+      column-gap: 15px;
+    }
+
+    .MENU__Content {
+      height: 300px;
+      margin-top: 0px;
+      border: 5px solid #EF7625;
+    }
+
+    .MENU__img {
+      margin-top: 25px;
+    }
+
+    .MENU__Details {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .MENU__Detail {
+      margin-top: 30px;
+      font-size: 14px;
+    }  
+
+    .CONTACT__Container {
+      height: 200px;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    footer {
+      height: 165px;
+    }
+
+    .social-links {
+      gap: 15px;
+    }
+
+    .FOTTER__Logo {
+      height: 100px;
+      width: auto;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+
+   :root {
+      /*========== Font and typography ==========*/
+      --nav-font-size:  12px;
+      --title-font-size: 18px;
+      --description-font-size: 10px;
+      --h1-font-size: 16px;
+      --h2-font-size: 12px;
+      --button-font-size: 12px;
+      /*========== Margenes ==========*/
+      --mb-1: 50px;     
+    }
+
+  }  
+
+  /*========== Mobile devices ==========*/
+  @media (max-width: 600px) {
+
+    .topnav {
+      display: block;
+    }
+
+    .to-top {
+      bottom: 16px;
+      right: 15px;
+      font-size: 22px;
+      height: 25px;
+      width: 25px;
+    }
+
+    .Button {
+      padding: 4px 30px;
+      border: 4px solid #EF7625;
+    }
+
+    .NAV-Container {
+      display: none;
+    }
+
+    .HOME__Container {
+      height: 200px;
+    }
+
+    .HOME__Title {
+      font-size: 30px;
+    }
+
+    .HOME__img {
+      width: 250px;
+    }
+
+    .ABOUT__Container {
+      height: 250px;
+      margin-top: 0px;
+    }
+
+    .ABOUT__Subtitle {
+      font-size: 10px;
+    }
+
+    .ABOUT__img {
+      height: 250px;
+    }
+
+    .ABOUT__Description {
+      margin-bottom: 5px;
+    }
+
+    .signature {
+      width: 55px;
+      height: auto;
+      margin-bottom: 0px;
+    }
+
+    .SERVICES__section {
+      margin-top: 30px;
+    }
+
+    .SERVICES__Headline {
+      margin-bottom: -10px;
+    }
+
+    .SERVICES__Description {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .SERVICES__Container {
+      height: 600px;
+      grid-template-columns: repeat(1, minmax(150px, 1fr));
+      margin-top: 20px;
+    }
+
+    .SERVICES__img {
+      height: 60px;
+      margin-bottom: -10px;
+    }
+
+    .MENU__section {
+      margin-top: 30px;
+    }
+
+    .MENU__Container {
+      height: 940px;
+      gap: 0px;
+      grid-template-columns: repeat(2, 160px);
+      column-gap: 25px;
+    }
+
+    .MENU__Content {
+      height: 250px;
+      margin-top: 0px;
+      border: 5px solid #EF7625;
+    }
+
+    .MENU__Name {
+      margin-top: 16px;
+    }
+
+    .MENU__img {
+      margin-top: 20px;
+      height: 60px;
+    }
+
+    .MENU__Details {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .MENU__Detail {
+      margin-top: 26px;
+      font-size: 12px;
+    }  
+
+    .CONTACT__Container {
+      height: 100px;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      height: 100px;
+    }
+
+    .FOTTER__Container {
+      gap: 15px;
+    }
+
+    .social-links {
+      gap: 15px;
+    }
+
+    .FOTTER__Logo {
+      height: 80px;
+      width: auto;
+      margin-top: -10px;
+    }
+
+    .icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    .copyright {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+
+   :root {
+      /*========== Font and typography ==========*/
+      --nav-font-size:  14px;
+      --title-font-size: 12px;
+      --description-font-size: 8px;
+      --h1-font-size: 14px;
+      --h2-font-size: 12px;
+      --button-font-size: 10px;
+      /*========== Margenes ==========*/
+      --mb-1: 50px;     
+    }
+
+  }  
+
+  /*========== Small Mobile devices ==========*/
+  @media (max-width: 460px) {
+
+    .topnav {
+      display: block;
+    }
+
+    .to-top {
+      bottom: 16px;
+      right: 15px;
+      font-size: 22px;
+      height: 25px;
+      width: 25px;
+    }
+
+    .Button {
+      padding: 4px 30px;
+      border: 4px solid #EF7625;
+    }
+
+    .NAV-Container {
+      display: none;
+    }
+
+    .HOME__Container {
+      height: 200px;
+    }
+
+    .HOME__Title {
+      font-size: 30px;
+    }
+
+    .HOME__img {
+      width: 250px;
+    }
+
+    .ABOUT__Container {
+      height: 250px;
+      margin-top: 0px;
+    }
+
+    .ABOUT__Subtitle {
+      font-size: 10px;
+    }
+
+    .ABOUT__img {
+      height: 250px;
+    }
+
+    .ABOUT__Description {
+      margin-bottom: 5px;
+    }
+
+    .signature {
+      width: 55px;
+      height: auto;
+      margin-bottom: 0px;
+    }
+
+    .SERVICES__section {
+      margin-top: 30px;
+    }
+
+    .SERVICES__Description {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .SERVICES__Container {
+      height: 600px;
+      grid-template-columns: repeat(1, minmax(150px, 1fr));
+      margin-top: 20px;
+    }
+
+    .SERVICES__img {
+      height: 60px;
+      margin-bottom: -10px;
+    }
+
+    .MENU__section {
+      margin-top: 30px;
+    }
+
+    .MENU__Container {
+      height: 940px;
+      gap: 0px;
+      grid-template-columns: repeat(2, 160px);
+      column-gap: 25px;
+    }
+
+    .MENU__Content {
+      height: 250px;
+      margin-top: 0px;
+      border: 5px solid #EF7625;
+    }
+
+    .MENU__Name {
+      margin-top: 16px;
+    }
+
+    .MENU__img {
+      margin-top: 20px;
+      height: 60px;
+    }
+
+    .MENU__Details {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .MENU__Detail {
+      margin-top: 26px;
+      font-size: 12px;
+    }  
+
+    .CONTACT__Container {
+      height: 100px;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      height: 100px;
+    }
+
+    .FOTTER__Container {
+      gap: 15px;
+    }
+
+    .social-links {
+      gap: 15px;
+    }
+
+    .FOTTER__Logo {
+      height: 80px;
+      width: auto;
+      margin-top: -10px;
+    }
+
+    .icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    .copyright {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+
+   :root {
+      /*========== Font and typography ==========*/
+      --nav-font-size:  14px;
+      --title-font-size: 12px;
+      --description-font-size: 8px;
+      --h1-font-size: 14px;
+      --h2-font-size: 12px;
+      --button-font-size: 10px;
+      /*========== Margenes ==========*/
+      --mb-1: 50px;     
+    }
+
+  }
+
+
+  /*===========================================================================================================*/
+  /* MENU.HTML CSS FILE */
+
+  .MEAL__Container {
+    width: auto;
+    height: 2475px;
+    margin-left: 150px;
+    margin-right: 150px;
+    display: grid;
+    gap: 0px;
+    justify-content: center;
+    margin-top: 48px;
+    grid-template-columns: repeat(3, 225px);
+    column-gap: 64px;
+  }
+
+  .MEAL__Content {
+    height: 325px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 2px rgb(0,0,0,0.3);
+    padding: 12px;
+    text-align: center;
+    border-radius: 20px;
+    border: 6px solid #FFFFFF;
+  }
+
+  .MEAL__img {
+    width: 210px;
+    height: 210px;
+    align-self: center;
+    border-radius: 8px;
+    margin-top: -8px;
+  }
+
+  .MEAL__Name {
+    color: #000000;
+    font-size: 12px;
+    margin-top: 12px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .MEAL__Details {
+    font-size: 12px;
+    margin-bottom: 8px;
+    text-align: justify;
+    overflow: auto;
+    height: 60px;
+  }
+
+  .MEAL__Price {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+
+
+
+
